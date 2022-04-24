@@ -7,7 +7,9 @@ def mostrarMenu():
 
 mostrarMenu()
 opcion = input('ingresar opcion: ')
-while opcion >= '1' and opcion <= '4':
+while opcion < '1' or opcion > '4':
+    os.system('cls')
+    mostrarMenu()
     opcion = input('ingresar opcion:')
 
 while opcion != '4':
@@ -20,4 +22,9 @@ while opcion != '4':
     input()
     os.system('cls')
     mostrarMenu()
-    opcion = input('ingresar opcion: ')
+    opcion = input('ingresar opcion:')
+    while opcion < '1' or opcion > '4':
+        os.system('cls')
+        mostrarMenu()
+        opcion = input('ingresar opcion:')
+     
