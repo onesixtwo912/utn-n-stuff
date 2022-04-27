@@ -13,5 +13,4 @@ while cod_planta != '*':
             cod_planta = input('Ingresar codigo de planta: ')
             if cod_planta != '*':
                 cod_Secc = input('Ingresar codigo de seccion: ')
-    print(f'Planta {aux} Seccion {auxS} Cantidad de operarios {contOp}')
-    print(f'Planta {aux} Seccion {auxS} Cantidad de horas trabajadas {horasTotal}')            
+    print(f'Planta {aux} Seccion {auxS}: \n Cantidad de operarios {contOp} \n Cantidad de horas trabajadas {horasTotal}')              
