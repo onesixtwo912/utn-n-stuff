@@ -1,4 +1,5 @@
 max = 0
+mayorCat = 0
 cat = int(input('ingresar categoria: '))
 
 while (cat >= 1) and (cat <= 20):
