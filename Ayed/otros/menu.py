@@ -1,4 +1,4 @@
-import os
+#import os
 def mostrarMenu():
     print('1 - xxxxxxxxxxx')
     print('2 - yyyyyyyyyyy')
