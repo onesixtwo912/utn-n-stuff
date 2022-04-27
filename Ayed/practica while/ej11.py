@@ -1,8 +1,9 @@
 totalH = 0
-mayor = 0
-dia = (int(input('ingrese dia: ')))
+max = 0
+dniMax = ' '
+dia = input('ingrese dia: ')
 
-while dia != 0:
+while dia != '0':
 	cont = 0
 	horasD = 0
 	aux = dia
@@ -11,13 +12,13 @@ while dia != 0:
 		horas = int(input('ingrese horas trabajadas: '))
 		cont = cont + 1
 		horasD = horasD + horas
-		if horas > mayor:
-			dnimax = dni
+		if horas > max:
+			max = horas
+			dniMax = dni
 
-		dia = (int(input('Ingrese dia: ')))	
-	print(f'{dnimax} trabajo la mayor cantidad de horas')
-	print(f'promedio de horas trabajadas: {horasD/cont}')
+		dia = input('Ingrese dia: ')
+	print(f'{dniMax} trabajo la mayor cantidad de horas')
+	print(f'Promedio de horas trabajadas: {horasD/cont}')
 	totalH = totalH + horasD
 
-print(f'Cantidad de horas trabajadas: {totalH}')		
-
+print(f'Cantidad de horas trabajadas: {totalH}')
