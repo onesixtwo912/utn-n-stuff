@@ -1,4 +1,3 @@
-
 import os
 def mostrarMenu():
     os.system('cls')
@@ -21,7 +20,7 @@ def menu():
         elif opcion == '2':
             print(F'La mas productiva fue: {auxC} con {max} kgs')
         elif opcion == '3':
-            print(f'{activa/n*100}% del total') 
+            print(f'{cont/n*100}% del total') 
         input()
         os.system('cls')
         mostrarMenu()
@@ -31,7 +30,7 @@ def menu():
             mostrarMenu()
             opcion = input('Ingresar opcion: ')
     
-prodTotal = max = activa = 0
+prodTotal = max = cont = 0
 n = int(input('Ingresar cantidad de colmenas: '))
 for c in range(n):
     mayorC = 0
@@ -45,9 +44,9 @@ for c in range(n):
         kgs = float(input('Ingresar cantidad de Kgs recolectados: '))
         mayorC = mayorC + kgs
         prodTotal = prodTotal + kgs
-        activa = activa + 1
+        cont = cont + 1
         if mayorC > max:
             max = mayorC
             auxC = codigo
 
-menu()        
+menu()
