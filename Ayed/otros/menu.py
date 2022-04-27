@@ -5,26 +5,27 @@ def mostrarMenu():
     print('3 - zzzzzzzzzzz')
     print('4 - Salir')
 
-mostrarMenu()
-opcion = input('ingresar opcion: ')
-while opcion < '1' or opcion > '4':
-    os.system('cls')
+def menu():    
     mostrarMenu()
-    opcion = input('ingresar opcion:')
-
-while opcion != '4':
-    if opcion == '1':
-        print('xxxxxxxxxxx')
-    elif opcion == '2':
-        print('yyyyyyyyyyy')
-    elif opcion == '3':
-        print('zzzzzzzzzzz') 
-    input()
-    os.system('cls')
-    mostrarMenu()
-    opcion = input('ingresar opcion:')
+    opcion = input('Ingresar opcion: ')
     while opcion < '1' or opcion > '4':
         os.system('cls')
         mostrarMenu()
-        opcion = input('ingresar opcion:')
-     
+        opcion = input('Ingresar opcion: ')
+
+    while opcion != '4':
+        if opcion == '1':
+            print('xxxxxxxxxxx')
+        elif opcion == '2':
+            print('yyyyyyyyyyy')
+        elif opcion == '3':
+            print('zzzzzzzzzzz') 
+        input()
+        os.system('cls')
+        mostrarMenu()
+        opcion = input('Ingresar opcion: ')
+        while opcion < '1' or opcion > '4':
+            os.system('cls')
+            mostrarMenu()
+            opcion = input('Ingresar opcion: ')
+
