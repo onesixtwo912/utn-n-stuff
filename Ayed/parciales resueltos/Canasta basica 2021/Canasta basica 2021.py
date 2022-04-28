@@ -1,4 +1,4 @@
-#import os
+import os
 def mostrarMenu():
     os.system('cls')
     print('1 - Cantidad de supermercados que cumplen con la canasta basica.')
