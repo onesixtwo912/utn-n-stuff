@@ -1,5 +1,4 @@
 import os
-
 def mostrarMenu():
     print('1 - Grupo con mas puntos.')
     print('2 - Porcentaje... ')
@@ -26,11 +25,7 @@ def menu():
         mostrarMenu()	
         opcion = input('ingresar opcion: ')	
 
-total_t = 0
-cantidad_10 = 0
-total_comp = 0
-maxPuntos = 0
-
+total_t = antidad_10 = total_comp = maxPuntos = 0
 nombre_grupo = input('ingresar nombre de grupo: ')
 while nombre_grupo != '*':
     acum_resultado = 0
