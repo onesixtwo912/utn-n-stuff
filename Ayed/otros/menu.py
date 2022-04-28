@@ -1,5 +1,6 @@
 #import os
 def mostrarMenu():
+    os.system('cls')
     print('1 - xxxxxxxxxxx')
     print('2 - yyyyyyyyyyy')
     print('3 - zzzzzzzzzzz')
