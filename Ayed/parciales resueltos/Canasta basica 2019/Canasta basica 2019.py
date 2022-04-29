@@ -2,12 +2,10 @@ import os
 def menu():    
     os.system('cls')
     mostrarmenu = '1 - Cantidad de supermercados que cumplen con la canasta basica. \n2 - Supermercado de mayor costo total de compra. \n3 - Cantidad de supermercados que ofrecen lacteos. \n4 - Salir'
-    print(mostrarmenu)
-    opcion = input('Ingresar opcion: ')
+    opcion = input(f'{mostrarmenu} \nIngresar opcion: ')	
     while opcion < '1' or opcion > '4':
         os.system('cls')
-        print(mostrarmenu)
-        opcion = input('Ingresar opcion: ')
+        opcion = input(f'{mostrarmenu} \nIngresar opcion: ')	
     while opcion != '4':
         if opcion == '1':
             print(f'{cumplen} supermercados cumplen con la canasta basica.')
@@ -17,12 +15,10 @@ def menu():
             print(f'{contL} supermercado/s cuentan con productos lacteos') 
         input()
         os.system('cls')
-        print(mostrarmenu)
-        opcion = input('Ingresar opcion: ')
+        opcion = input(f'{mostrarmenu} \nIngresar opcion: ')	
         while opcion < '1' or opcion > '4':
             os.system('cls')
-            print(mostrarmenu)
-            opcion = input('Ingresar opcion: ')
+            opcion = input(f'{mostrarmenu} \nIngresar opcion: ')	
 
 def proceso():
     global acumCosto, contS, lact,rubro,precio
