@@ -1,7 +1,7 @@
 import os
 def menu():    
     os.system('cls')
-    mostrarmenu = '1 - Total de habitantes en todo el municipio \n2 - Cantidad de habitantes por tipo de vivienda. \n3 - Distrito con mayor ingreso mensual \n4 - Salir'
+    mostrarmenu = '1 - Total de habitantes en Rosario \n2 - Cantidad de habitantes por tipo de vivienda. \n3 - Distrito con mayor ingreso mensual \n4 - Salir'
     opcion = input(f'{mostrarmenu} \nIngresar opcion: ')
     while opcion < '1' or opcion > '4':
         os.system('cls')
