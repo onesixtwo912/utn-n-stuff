@@ -1,17 +1,12 @@
 import os
-def mostrarMenu():
-    os.system('cls')
-    print('1 - Cantidad de supermercados que cumplen con la canasta basica.')
-    print('2 - Supermercado de minSuper costo total de compra.')
-    print('3 - Cantidad de supermercados que ofrecen lacteos y carnes.')
-    print('4 - Salir')
-
 def menu():    
-    mostrarMenu()
+    os.system('cls')
+    mostrarmenu = '1 - Cantidad de supermercados que cumplen con la canasta basica. \n2 - Supermercado de menor costo total de compra. \n3 - Cantidad de supermercados que ofrecen lacteos y carnes. \n4 - Salir'
+    print(mostrarmenu)
     opcion = input('Ingresar opcion: ')
     while opcion < '1' or opcion > '4':
         os.system('cls')
-        mostrarMenu()
+        print(mostrarmenu)
         opcion = input('Ingresar opcion: ')
 
     while opcion != '4':
@@ -23,11 +18,11 @@ def menu():
             print(f'{lc} supermercado/s ofrecen lacteos y carnes') 
         input()
         os.system('cls')
-        mostrarMenu()
+        print(mostrarmenu)
         opcion = input('Ingresar opcion: ')
         while opcion < '1' or opcion > '4':
             os.system('cls')
-            mostrarMenu()
+            print(mostrarmenu)
             opcion = input('Ingresar opcion: ')
 
 def carga():
@@ -54,7 +49,6 @@ def carga():
                 rubro = input('Ingresar rubro: ').upper()
     if l and c:
         lc = lc + 1
-
 
 def proceso():
     global minSuper, cumplen,min
