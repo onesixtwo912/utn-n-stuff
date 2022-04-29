@@ -2,12 +2,10 @@ import os
 def menu():    
 	os.system('cls')
 	mostrarmenu = '1 - Cantidad de obras. \n2 - Escuela que presento mas obras. \n3 - Cantidad de obras de cada genero. \n4 - Salir'
-	print(mostrarmenu)
-	opcion = input('Ingresar opcion: ')
+	opcion = input(f'{mostrarmenu} \nIngresar opcion: ')	
 	while opcion < '1' or opcion > '4':
 		os.system('cls')
-		print(mostrarmenu)
-		opcion = input('Ingresar opcion: ')
+		opcion = input(f'{mostrarmenu} \nIngresar opcion: ')	
 	while opcion != '4':	
 		if opcion == '1':
 			print(f'Total de obras presentadas: {totalF + totalC + totalP}')
@@ -17,10 +15,9 @@ def menu():
 			print(f'Fabula: {totalF} \nCuento: {totalC} \nPoesia: {totalP}')
 		input()	
 		os.system('cls')	
-		print(mostrarmenu)	
-		opcion = input('ingresar opcion:')
+		opcion = input(f'{mostrarmenu} \nIngresar opcion: ')	
 		while opcion < '1' or opcion > '4':
-			opcion = input('ingresar opcion:')
+			opcion = input(f'{mostrarmenu} \nIngresar opcion: ')	
 
 mayor = totalF = totalC = totalP = 0
 for escuela in range(11):
