@@ -2,12 +2,10 @@ import os
 def menu():    
     os.system('cls')
     mostrarmenu = '1 - Grupo con mas puntos. \n2 - Porcentaje... \n3 - Cantidad de grupos que obtuvieron 10. \n4 - Salir'
-    print(mostrarmenu)
-    opcion = input('Ingresar opcion: ')
+    opcion = input(f'{mostrarmenu} \nIngresar opcion: ')	
     while opcion < '1' or opcion > '4':
         os.system('cls')
-        print(mostrarmenu)
-        opcion = input('Ingresar opcion: ')
+        opcion = input(f'{mostrarmenu} \nIngresar opcion: ')	
     while opcion != '4':
         if opcion == '1':
             print(aux_grupo)
@@ -17,9 +15,11 @@ def menu():
             print(cantidad_10)
         input()
         os.system('cls')
-        print(mostrarmenu)	
-        opcion = input('ingresar opcion: ')	
-        
+        opcion = input(f'{mostrarmenu} \nIngresar opcion: ')	
+        while opcion < '1' or opcion > '4':
+            os.system('cls')
+            opcion = input(f'{mostrarmenu} \nIngresar opcion: ')
+
 total_t = cantidad_10 = total_comp = maxPuntos = 0
 nombre_grupo = input('ingresar nombre de grupo: ')
 while nombre_grupo != '*':
