@@ -1,19 +1,13 @@
 import os
-def mostrarMenu():
+def menu():    
     os.system('cls')
-    print('1 - Produccion total')
-    print('2 - Colmena mas productiva y cantidad que produjo.')
-    print('3 - Porcentaje de colmenas activas.')
-    print('4 - Salir')
-
-def menu():
-    mostrarMenu()
-    opcion = input('ingresar opcion: ')
+    mostrarmenu = '1 - Produccion total. \n2 - Colmena mas productiva y cantidad que produjo. \n3 - Porcentaje de colmenas activas. \n4 - Salir'
+    print(mostrarmenu)
+    opcion = input('Ingresar opcion: ')
     while opcion < '1' or opcion > '4':
         os.system('cls')
-        mostrarMenu()
-        opcion = input('ingresar opcion:')
-
+        print(mostrarmenu)
+        opcion = input('Ingresar opcion: ')
     while opcion != '4':
         if opcion == '1':
             print(f'Produccion total: {prodTotal} Kgs')
@@ -23,11 +17,11 @@ def menu():
             print(f'{cont/n*100}% del total') 
         input()
         os.system('cls')
-        mostrarMenu()
+        print(mostrarmenu)
         opcion = input('Ingresar opcion: ')
         while opcion < '1' or opcion > '4':
             os.system('cls')
-            mostrarMenu()
+            print(mostrarmenu)
             opcion = input('Ingresar opcion: ')
     
 prodTotal = max = cont = 0
@@ -48,5 +42,4 @@ for c in range(n):
         if mayorC > max:
             max = mayorC
             auxC = codigo
-
 menu()
