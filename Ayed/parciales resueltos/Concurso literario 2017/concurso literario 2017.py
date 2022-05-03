@@ -20,7 +20,7 @@ def menu():
 			opcion = input(f'{mostrarmenu} \nIngresar opcion: ')	
 
 mayor = totalF = totalC = totalP = 0
-for escuela in range(11):
+for escuela in range(1,11):
 	cantE = 0
 	print(f'Escuela N° {escuela}')
 	dni= input('ingresar dni: ')
@@ -35,9 +35,7 @@ for escuela in range(11):
 		elif genero == 'P':
 			totalP = totalP + 1
 		cantE = cantE + 1	
-		
 		dni= input('ingresar dni: ')	
-
 	if cantE > mayor:
 		cantE = mayor
 		mayorEsc = escuela
