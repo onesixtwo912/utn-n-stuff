@@ -1,10 +1,26 @@
 import os
-mayor = 0
-totalF = 0
-totalC = 0
-totalP = 0
+def menu():    
+	os.system('cls')
+	mostrarmenu = '1 - Cantidad de obras. \n2 - Escuela que presento mas obras. \n3 - Cantidad de obras de cada genero. \n4 - Salir'
+	opcion = input(f'{mostrarmenu} \nIngresar opcion: ')	
+	while opcion < '1' or opcion > '4':
+		os.system('cls')
+		opcion = input(f'{mostrarmenu} \nIngresar opcion: ')	
+	while opcion != '4':	
+		if opcion == '1':
+			print(f'Total de obras presentadas: {totalF + totalC + totalP}')
+		elif opcion == '2':
+			print(f'La escuela {mayorEsc} presento la mayor cantidad de obras.')
+		elif opcion == '3':
+			print(f'Fabula: {totalF} \nCuento: {totalC} \nPoesia: {totalP}')
+		input()	
+		os.system('cls')	
+		opcion = input(f'{mostrarmenu} \nIngresar opcion: ')	
+		while opcion < '1' or opcion > '4':
+			opcion = input(f'{mostrarmenu} \nIngresar opcion: ')	
 
-for escuela in range(11):
+mayor = totalF = totalC = totalP = 0
+for escuela in range(1,11):
 	cantE = 0
 	print(f'Escuela N° {escuela}')
 	dni= input('ingresar dni: ')
@@ -19,36 +35,8 @@ for escuela in range(11):
 		elif genero == 'P':
 			totalP = totalP + 1
 		cantE = cantE + 1	
-		
 		dni= input('ingresar dni: ')	
-
 	if cantE > mayor:
 		cantE = mayor
 		mayorEsc = escuela
-
-os.system('cls')
-print('1 - Cantidad de obras. ')
-print('2 - Escuela que presento mas obras. ')
-print('3 - Cantidad de obras de cada genero. ')
-print('4 - Salir. ')
-opcion = input('ingresar opcion: ')
-while opcion < '1' or opcion > '4':
-	opcion = input('ingresar opcion: ')
-	os.system('cls')
-
-while opcion != '4':	
-	if opcion == '1':
-		print(f'Total de obras presentadas: {totalF + totalC + totalP}')
-	elif opcion == '2':
-		print(f'La escuela {mayorEsc} presento la mayor cantidad de obras.')
-	elif opcion == '3':
-		print(f'Fabula: {totalF} \nCuento: {totalC} \nPoesia: {totalP}')
-	input()	
-	os.system('cls')	
-	print('1 - Cantidad de obras. ')
-	print('2 - Escuela que presento mas obras. ')
-	print('3 - Cantidad de obras de cada genero. ')
-	print('4 - Salir. ') 	
-	opcion = input('ingresar opcion:')
-	while opcion < '1' or opcion > '4':
-		opcion = input('ingresar opcion:')
+menu()

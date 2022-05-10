@@ -1,32 +1,18 @@
-#import os
-def mostrarMenu():
-    os.system('cls')
-    print('1 - xxxxxxxxxxx')
-    print('2 - yyyyyyyyyyy')
-    print('3 - zzzzzzzzzzz')
-    print('4 - Salir')
-
-def menu():    
-    mostrarMenu()
-    opcion = input('Ingresar opcion: ')
+import os
+def menu():
+    mostrarmenu = '1 - xxx \n2 - yyy \n3 - zzz \n4 - Salir'
+    opcion = input(f'{mostrarmenu} \nIngresar opcion: ');os.system('cls')
     while opcion < '1' or opcion > '4':
-        os.system('cls')
-        mostrarMenu()
-        opcion = input('Ingresar opcion: ')
-
+        opcion = input(f'{mostrarmenu} \nIngresar opcion valida: ');os.system('cls')
     while opcion != '4':
         if opcion == '1':
-            print('xxxxxxxxxxx')
+            print(f'xxx')
         elif opcion == '2':
-            print('yyyyyyyyyyy')
+            print(f'yyy')
         elif opcion == '3':
-            print('zzzzzzzzzzz') 
-        input()
-        os.system('cls')
-        mostrarMenu()
-        opcion = input('Ingresar opcion: ')
+            print(f'zzz')
+        input() ; os.system('cls')
+        opcion = input(f'{mostrarmenu} \nIngresar opcion: ');os.system('cls')
         while opcion < '1' or opcion > '4':
-            os.system('cls')
-            mostrarMenu()
-            opcion = input('Ingresar opcion: ')
-
+            opcion = input(f'{mostrarmenu} \nIngresar opcion valida: ');os.system('cls')
+menu()

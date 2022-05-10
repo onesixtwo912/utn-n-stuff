@@ -1,19 +1,11 @@
 import os
-
-def mostrarMenu():
-    print('1 - Grupo con mas puntos.')
-    print('2 - Porcentaje... ')
-    print('3 - Cantidad de grupos que obtuvieron 10.')
-    print('4 - Salir.')
-
-def menu():
+def menu():    
     os.system('cls')
-    mostrarMenu()
-    opcion = input('ingresar opcion: ')
+    mostrarmenu = '1 - Grupo con mas puntos. \n2 - Porcentaje... \n3 - Cantidad de grupos que obtuvieron 10. \n4 - Salir'
+    opcion = input(f'{mostrarmenu} \nIngresar opcion: ')	
     while opcion < '1' or opcion > '4':
-        opcion = input('ingresar opcion: ')
         os.system('cls')
-
+        opcion = input(f'{mostrarmenu} \nIngresar opcion: ')	
     while opcion != '4':
         if opcion == '1':
             print(aux_grupo)
@@ -23,14 +15,12 @@ def menu():
             print(cantidad_10)
         input()
         os.system('cls')
-        mostrarMenu()	
-        opcion = input('ingresar opcion: ')	
+        opcion = input(f'{mostrarmenu} \nIngresar opcion: ')	
+        while opcion < '1' or opcion > '4':
+            os.system('cls')
+            opcion = input(f'{mostrarmenu} \nIngresar opcion: ')
 
-total_t = 0
-cantidad_10 = 0
-total_comp = 0
-maxPuntos = 0
-
+total_t = cantidad_10 = total_comp = maxPuntos = 0
 nombre_grupo = input('ingresar nombre de grupo: ')
 while nombre_grupo != '*':
     acum_resultado = 0
@@ -45,9 +35,8 @@ while nombre_grupo != '*':
         total_comp = total_comp + 1 
         resultado = int(input('ingresar resultado: '))
         while   resultado <= 1 and resultado >= 10:
-               resultado = int(input('ingresar resultado: '))
-        
-        while r10 == False and resultado == 10:
+               resultado = int(input('ingresar resultado: '))       
+        if not r10 and resultado == 10:
             cantidad_10 = cantidad_10 + 1
             r10 = True
         acum_resultado = acum_resultado + resultado
@@ -59,9 +48,8 @@ while nombre_grupo != '*':
         aux_grupo = nombre_grupo
         maxPuntos = acum_resultado
     if vuelta == 3:
-        print(nombre_grupo,'se presento en todas las competencias.')
+        print(f'{nombre_grupo} se presento en todas las competencias.')
     else:
-        print(nombre_grupo,'no se presento en todas las competencias.')
+        print(f'{nombre_grupo} no se presento en todas las competencias.')
     nombre_grupo = input('ingresar nombre de grupo: ')
-
 menu()
