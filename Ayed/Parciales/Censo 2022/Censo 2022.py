@@ -41,4 +41,4 @@ while censista != '0':
     proceso ()
     menu()
     censista = input('Ingresar codigo de censista: ')
-print (f'total general de viviendas habitadas:{tot_h} ') 
+print (f'Total general de viviendas habitadas:{tot_h} ') 
