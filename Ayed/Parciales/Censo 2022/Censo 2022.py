@@ -36,9 +36,9 @@ def proceso():
                 max_codigo = tot_h
 
 tot_h = 0
-censista = input('Ingresar codigo de cencista: ')
+censista = input('Ingresar codigo de censista: ')
 while censista != '0':
     proceso ()
     menu()
-    censista = input('Ingresar codigo de cencista: ')
+    censista = input('Ingresar codigo de censista: ')
 print (f'total general de viviendas habitadas:{tot_h} ') 
