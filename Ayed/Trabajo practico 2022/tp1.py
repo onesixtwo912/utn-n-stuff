@@ -70,5 +70,5 @@ while op != '0':
     elif op == '3': 
         recepcion()
     elif op == '8': 
-        reportes()
+        reportes() 
     leerOp(1,'012345678')
