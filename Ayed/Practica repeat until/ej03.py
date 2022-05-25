@@ -1,9 +1,8 @@
+nro = int(input('Ingresar cantidad de valores a evaluar: '))
 print('f(x) = 3 * x + 2' )
-rta = 'C'
-while rta != 'F':
-	x = float(input('ingresar un valor para x: '))
+cont = 0
+while cont != nro:
+	x = float(input('Ingresar un valor para x: '))
 	fx = 3 * x + 2
+	cont += 1
 	print (f'f({x}) = {fx}')
-	rta = input('C/F: ')
-	while rta not in 'CF':
-		rta = input('C/F: ')
