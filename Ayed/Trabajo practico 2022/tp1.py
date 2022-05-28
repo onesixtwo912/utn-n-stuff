@@ -1,15 +1,14 @@
 import os
-def leerOp(x,menuop):
-    global op ; os.system('cls')
-    if x == 1: 
-        mostrarMenu = 'Menu Principal \n\n 1 - Administracion. \n 2 - Entrega de cupos. \n 3 - Recepcion. \n 4 - Registrar calidad. \n 5 - Registrar peso bruto. \n 6 - Registrar descarga. \n 7 - Registrar tara. \n 8 - Reportes. \n 0 - Salir.'
-    elif x == 2:
-         mostrarMenu = 'Menu de administracion \n\n A - Titulares. \n B - Productos. \n C - Rubros \n D - Rubros por producto.  \n E - Silos.  \n F - Sucursales. \n G - Producto por titular. \n V - Volver al menu principal.'
-    else: 
-        mostrarMenu = 'Menu de titulares \n\n A - Alta. \n B - Baja. \n C - Consulta. \n M - Modificacion. \n V - Volver al menu anterior.'
-    op = input(f'{mostrarMenu}\n\n Seleccione una opcion: ').upper() ; os.system('cls')
-    while op not in menuop:
-        op = input(f'{mostrarMenu}\n\n Seleccione una opcion valida: ').upper() ; os.system('cls')
+def valido_ingreso(x,valores_validos,i):
+    os.system('cls')
+    if x == 1: k = 'Menu Principal \n\n 1 - Administracion. \n 2 - Entrega de cupos. \n 3 - Recepcion. \n 4 - Registrar calidad. \n 5 - Registrar peso bruto. \n 6 - Registrar descarga. \n 7 - Registrar tara. \n 8 - Reportes. \n 0 - Salir.\n\n '
+    elif x == 2: k = 'Menu de administracion \n\n A - Titulares. \n B - Productos. \n C - Rubros \n D - Rubros por producto.  \n E - Silos.  \n F - Sucursales. \n G - Producto por titular. \n V - Volver al menu principal.\n\n '
+    elif x == 3: k = 'Menu de titulares \n\n A - Alta. \n B - Baja. \n C - Consulta. \n M - Modificacion. \n V - Volver al menu anterior.\n\n '
+    else: k = ''
+    y = input(f'{k}Ingresar {i}: ').upper() ; os.system('cls')
+    while y not in valores_validos:
+        y = input(f'{k}Ingresar {i}: ').upper() ; os.system('cls')
+    return y
 
 def ingresoNro(i):
     y = input(f'Ingresar {i}: ')
@@ -21,24 +20,22 @@ def mensaje():
     print('Esta funcionalidad esta en construcción.'); input()
 
 def administraciones():
-    leerOp(2,'ABCDEFGV')
+    op = valido_ingreso(2,'ABCDEFGV','opcion')
     while op != 'V':
         titulares() if op == 'A' else mensaje() if op in 'BCDEFGV' else 0
-        leerOp(2,'ABCDEFGV')
+        op = valido_ingreso(2,'ABCDEFGV','opcion')
 
 def titulares():
-    leerOp(3,'ABCMV')
+    op = valido_ingreso(3,'ABCMV','opcion')
     while op != 'V':
         mensaje() if op in 'ABCM' else 0
-        leerOp(3,'ABCMV')
+        op = valido_ingreso(3,'ABCMV','opcion')
 
 def recepcion():
     global patente,producto,pesoNeto,camionM,pesoM,patenteMin,camionS,pesoS,max,min,patenteMax,pesoBruto,tara
     patente = input('Ingresar patente: ')
     while patente != '*':
-        producto = input('Ingresar producto: ').upper()
-        while producto != 'S' and producto != 'M':
-            producto = input('Ingresar producto: ').upper()
+        producto = valido_ingreso(0,'SM','producto')
         pesoBruto = ingresoNro('peso bruto'); tara = ingresoNro('tara')
         pesoNeto = pesoBruto - tara ; print(f'El peso neto es {pesoNeto}'); input(); os.system('cls')
         if producto == 'S':
@@ -46,7 +43,7 @@ def recepcion():
             if pesoNeto > max:
                 patenteMax = patente ; max = pesoNeto
         else:
-            camionM = camionM + 1 ; pesoM = pesoM + pesoNeto
+            camionM += 1 ; pesoM += pesoNeto
             if camionM == 1 or pesoNeto < min:
                 patenteMin = patente ; min = pesoNeto
         patente = input('Ingresar patente: ')
@@ -57,11 +54,10 @@ def reportes():
         print(f' Peso neto total de soja: {pesoS} Kgs \n Peso neto total de maíz: {pesoM} Kgs')
         print(f' Promedio del peso neto de soja por camión: {pesoS/camionS} Kgs\n Promedio del peso neto de maíz por camión: {pesoM/camionM} Kgs')
         print(f' Patente del camión de soja que mayor cantidad descargo: {patenteMax} \n Patente del camión de maíz que menor cantidad descargo: {patenteMin}'); input()
-    else:
-        print('Todavia no se cargaron datos.'); input()
+    else: print('Aun no se cargaron datos.'); input()
 
 max = camionS = camionM = pesoS = pesoM = 0
-leerOp(1,'012345678')
+op = valido_ingreso(1,'012345678','opcion')
 while op != '0':
     if op == '1':
         administraciones()
@@ -71,4 +67,4 @@ while op != '0':
         recepcion()
     elif op == '8':
         reportes()
-    leerOp(1,'012345678')
+    op = valido_ingreso(1,'012345678','opcion')
