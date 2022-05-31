@@ -1,15 +1,14 @@
-max = 0
-mayorCat = 0
+max = mayorCat = 0
 cat = int(input('ingresar categoria: '))
 
 while cat >= 1 and cat <= 20:
-	aux = cat 
-	totalKm = 0
+	aux, totalKm = cat, 0
+
 	while cat == aux:
 		auto = input('ingresar auto: ')
 		km = float('ingresar kilometraje: ') 
 		monto = float('ingresar monto: ')
-		totalKm = totalKm + km 
+		totalKm += km 
 		if monto > max:
 			mayorCat = cat
 			max = monto

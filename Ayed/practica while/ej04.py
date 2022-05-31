@@ -1,9 +1,9 @@
 aux = 0
-vend = (input('ingresar vendedor: '))
-while vend != '*':
+vendedor = (input('ingresar vendedor: '))
+while vendedor != '*':
 	importe = float(input('ingresar importe: '))
 	if importe > aux:
-		vMayor = vend
+		vMayor = vendedor 
 		iMayor = importe
-	vend = (input('ingresar vendedor: '))
+	vendedor = (input('ingresar vendedor: '))
 print(f'el vendedor {vMayor} obtuvo la venta con mayor importe : ${iMayor}')		
