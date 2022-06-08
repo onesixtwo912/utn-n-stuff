@@ -3,7 +3,7 @@ def carga(x):
         x[i] = int(input('Ingresar nro: '))
 
 def cambio(x,y):
-    for i in range(n//2):
+    for i in range((n+1)//2):
         aux = x[i]
         y[i] = x[n-1-i]
         y[n-1-i] = aux
@@ -12,9 +12,8 @@ def muestra(x):
     for i in range(n):
         print(x[i])
 
-n = 5; a = b = n*[0]
+n = 5; a = n*[0]
+b = n*[0]
 carga(a)
-cambio(a,b)
-muestra(b)
-cambio(a,a)
-muestra(a)
+cambio(a,b), muestra(b)
+cambio(a,a), muestra(a)
