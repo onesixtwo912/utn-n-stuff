@@ -1,3 +1,7 @@
+def inicio(x):
+    for i in range(12):
+            x[i] = (chr(i+65))
+
 def carga(x):
     codigo = validar('A','L','*')
     while codigo != '*':
@@ -30,5 +34,5 @@ def muestra (x,y):
     for i in range(len(b)):
         print(f'\t\t{y[i]}\t\t{x[i]}')
 
-a,b = 12*[0], ['A','B','C','D','E','F','G','H','I','J','K','L']
-carga(a), orden(a,b), muestra(a,b)
+a,b = 12*[0], 12*['']
+inicio(b), carga(a), orden(a,b), muestra(a,b)
