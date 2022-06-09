@@ -27,7 +27,7 @@ def muestra(x):
     for i in range(n+m):
         print(x [i])     
 
-m, n = 5, 3; a, b, c = m*[0], n*[0], (m+n)*[0]
+m, n = 16, 20; a, b, c = m*[0], n*[0], (m+n)*[0]
 carga(a,m)        
 carga(b,n)
 merge(a,b,c)
