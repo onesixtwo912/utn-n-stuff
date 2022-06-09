@@ -13,7 +13,7 @@ def busqueda(x,y):
         else: inicio = medio + 1        
     print(f'Se encontro en la posicion {medio}.') if flag else print('No se encontro.')
 
-n = 5; e = n*[0]
+n = 30; e = n*[0]
 carga(e)
 nro = int(input('\nBusqueda \nIngresar nro: '))
 busqueda(e,nro)
