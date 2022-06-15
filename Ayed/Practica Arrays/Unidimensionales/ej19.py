@@ -23,9 +23,9 @@ def orden(x,y):
                 aux2 = y[i]; y[i] = y[k]; y[k] = aux2
 
 def muestra (x,y):
-    print(f'\tCODIGO DE AVION\t   TIEMPO DE VUELO TOTAL\n')
-    for i in range(len(b)):
-        print(f'\t\t{y[i]}\t\t  {x[i]}')
+    print(f'\tCODIGO DE AVION    TIEMPO DE VUELO TOTAL\n')
+    for i in range(n):
+        print(' '*14,y[i],' '*16,x[i])
 
 n = 12; a,b = n*[0], n*['']
 inicio(b), carga(a), orden(a,b), muestra(a,b)
