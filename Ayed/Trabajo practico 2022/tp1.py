@@ -63,9 +63,9 @@ def recepcion():
 def reportes():
     if camionS > 0 and camionM > 0:
         print(f'Reporte: \n\n Cantidad total de camiones: {camionS + camionM} \n Total de camiones de soja: {camionS} \n Total de camiones de maíz: {camionM}')
-        print(f'\tPeso neto total de soja: {pesoS} Kgs \n Peso neto total de maíz: {pesoM} Kgs')
-        print(f'\tPromedio del peso neto de soja por camión: {pesoS/camionS} Kgs\n Promedio del peso neto de maíz por camión: {pesoM/camionM} Kgs')
-        print(f'\tPatente del camión de soja que mayor cantidad descargo: {patenteMax} \n Patente del camión de maíz que menor cantidad descargo: {patenteMin}'); input()
+        print(f' Peso neto total de soja: {pesoS} Kgs \n Peso neto total de maíz: {pesoM} Kgs')
+        print(f' Promedio del peso neto de soja por camión: {pesoS/camionS} Kgs\n Promedio del peso neto de maíz por camión: {pesoM/camionM} Kgs')
+        print(f' Patente del camión de soja que mayor cantidad descargo: {patenteMax} \n Patente del camión de maíz que menor cantidad descargo: {patenteMin}'); input()
     else: print('Aun no se cargaron datos.'); input()
 
 max = camionS = camionM = pesoS = pesoM = 0
