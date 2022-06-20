@@ -9,7 +9,7 @@ def suma(x,y):
         suma += x[y][i]
     return suma        
 
-f, c = 2, 2
+f, c = 30, 12
 a = [[0]*f for k in range(c)]
 carga(a)
 nro = int(input('numero de fila a sumar: '))
