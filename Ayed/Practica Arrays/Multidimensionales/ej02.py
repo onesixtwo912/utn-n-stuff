@@ -10,7 +10,7 @@ def suma(x):
         print (d1+d2)
 
 f = c = 2
-a = [[0]*f for k in range(c)]
+a = [[0]*c for k in range(f)]
 carga(a)
 print(a)
 suma(a)
