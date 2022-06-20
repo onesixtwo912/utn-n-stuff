@@ -10,7 +10,7 @@ def suma(x,y):
     return suma        
 
 f, c = 30, 12
-a = [[0]*f for k in range(c)]
+a = [[0]*c for k in range(f)]
 carga(a)
 nro = int(input('numero de fila a sumar: '))
 while nro < 0 or nro > f:
