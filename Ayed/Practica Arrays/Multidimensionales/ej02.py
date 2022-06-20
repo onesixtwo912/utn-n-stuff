@@ -7,8 +7,6 @@ def suma(x):
     for i in range(f):
         d1 = x[i][i]
         d2 = x[i][c-1-i]
-        print(d1)
-        print(d2)
         print (d1+d2)
 
 f = c = 2
