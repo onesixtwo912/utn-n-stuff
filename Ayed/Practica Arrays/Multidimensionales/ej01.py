@@ -1,8 +1,7 @@
 def carga(x):
     for i in range(f):
-        print(i)
-        for k in range(c):
-            x [i][k] = float(input('nro: '))
+        for j in range(c):
+            x[i][j] = float(input(f'fila {i} columna {j}: '))
 
 def suma(x,y):
     suma = 0
@@ -10,8 +9,8 @@ def suma(x,y):
         suma += x[y][i]
     return suma        
 
-f, c = 30, 12
-a = f*[c*[0]]
+f, c = 2, 2
+a = [[0]*f for k in range(c)]
 carga(a)
 nro = int(input('numero de fila a sumar: '))
 print(f'La suma es {suma(a,nro)} ')
