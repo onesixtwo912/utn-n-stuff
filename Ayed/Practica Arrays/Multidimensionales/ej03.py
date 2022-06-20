@@ -14,8 +14,8 @@ def muestra(x):
             print(x[i][j], end=' ')
         print('\n')
 
-f,c = 30,15
-a,b,r = [[0]*f for k in range(c)], [[0]*f for k in range(c)], [[0]*f for k in range(c)]
+f,c = 10,5
+a,b,r = [[0]*c for k in range(f)], [[0]*c for k in range(f)], [[0]*c for k in range(f)]
 carga(a); muestra(a)
 carga(b); muestra(b)
 suma(a,b,r)
